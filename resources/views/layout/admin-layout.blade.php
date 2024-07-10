@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs" defer></script>
+
+    {{-- Apexchart --}}
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
     {{-- font inter --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +20,7 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
 
     @vite('resources/css/app.css')
-    <title>Admin Dashboard</title>
+    <title>{{ $title }}</title>
 </head>
 
 <body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100" style="font-family: poppins">
@@ -27,7 +29,7 @@
         @include('partials.admin-sidebar')
 
         <!-- Main content -->
-        <div class="flex-1 flex flex-col min-h-screen">
+        <div class="sm:ml-64 flex-1 flex flex-col min-h-screen">
             <!-- Header -->
             @include('partials.admin-header')
 
@@ -39,5 +41,6 @@
     </div>
 </body>
 <script src="./js/admin.js"></script>
+<script type="module" src="./js/admin-chart.js" defer></script>
 
 </html>

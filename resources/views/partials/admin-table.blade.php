@@ -1,109 +1,71 @@
-{{-- <div class="overflow-x-auto p-3 bg-white rounded-sm">
-    <h2 class="font-bold text-xl text-gray-600">DATA LOKER</h2>
-    <table class="table">
-        <!-- head -->
-        <thead class="">
-            <tr>
-                <th class="text-gray-500 text-xl">PEMINJAM</th>
-                <th class="text-gray-500 text-xl">EMAIL</th>
-                <th class="text-gray-500 text-xl">LOKER</th>
-                <th class="text-gray-500 text-xl">WAKTU PINJAM</th>
-                <th class="text-gray-500 text-xl">DURASI PINJAM</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- row 1 -->
-            <tr>
-                <td>
-                    <div class="flex items-center gap-3">
-                        <div class="avatar">
-                            <div class="mask mask-squircle h-12 w-12">
-                                <img src="https://img.daisyui.com/tailwind-css-component-profile-2@56w.png"
-                                    alt="Avatar Tailwind CSS Component" />
+<div class="bg-white rounded-sm shadow-md mb-4">
+    <h2 class="p-3 text-2xl text-slate-600 font-bold mx-2">Data Loker</h2>
+    <div class="overflow-x-auto p-2 sm:p-1 md:p-2">
+        <table class="table">
+            <!-- head -->
+            <thead>
+                <tr class="bg-gray-400/20">
+                    <th class="p-2 text-center md:text-sm">PEMINJAM</th>
+                    <th class="p-2 text-center md:text-sm hidden lg:block">EMAIL</th>
+                    <th class="p-2 text-center md:text-sm">LOKER</th>
+                    <th class="p-2 text-center md:text-sm hidden min-[470px]:block">WAKTU PINJAM</th>
+                    <th class="p-2 text-center md:text-sm">DURASI PINJAM</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- row 1 -->
+                <tr>
+                    <td class="p-2">
+                        <div class="flex justify-center items-center gap-2">
+                            <div class="hidden md:block flex-shrink-0">
+                                <div class="w-12 h-12 rounded-full overflow-hidden">
+                                    <img class="w-full h-full object-cover" src="./img/user.jpg" alt="">
+                                </div>
                             </div>
+                            <p class="text-xs lg:text-sm">Muhamad Fazril Maulana</p>
                         </div>
-                        <div>
-                            <div class="font-bold">Hart Hagerty</div>
-                            <div class="text-sm opacity-50">United States</div>
-                        </div>
-                    </div>
-                </td>
-                <td>
-                    Zemlak, Daniel and Leannon
-                    <br />
-                    <span class="badge badge-ghost badge-sm">Desktop Support Technician</span>
-                </td>
-                <td>Purple</td>
-            </tr>
-            <!-- row 2 -->
-            <tr>
-                <td>
-                    <div class="flex items-center gap-3">
-                        <div class="avatar">
-                            <div class="mask mask-squircle h-12 w-12">
-                                <img src="https://img.daisyui.com/tailwind-css-component-profile-3@56w.png"
-                                    alt="Avatar Tailwind CSS Component" />
+                    </td>
+                    <td class="text-xs lg:text-sm p-2 text-center hidden lg:table-cell">mfazrilmaulana@gmail.com</td>
+                    <td class="text-xs lg:text-sm p-2 text-center">1</td>
+                    <td class="text-xs lg:text-sm p-2 text-center hidden min-[470px]:table-cell">22/03/2023, 14:12</td>
+                    <td class="text-xs lg:text-sm p-2 text-center">20 menit</td>
+                </tr>
+                <!-- row 2 -->
+                <tr>
+                    <td class="p-2">
+                        <div class="flex justify-center items-center gap-2">
+                            <div class="hidden md:block flex-shrink-0">
+                                <div class="w-12 h-12 rounded-full overflow-hidden">
+                                    <img class="w-full h-full object-cover" src="./img/user.jpg" alt="">
+                                </div>
                             </div>
+                            <p class="text-xs lg:text-sm">Muhamad Fazril Maulana</p>
                         </div>
-                        <div>
-                            <div class="font-bold">Brice Swyre</div>
-                            <div class="text-sm opacity-50">China</div>
-                        </div>
-                    </div>
-                </td>
-                <td>
-                    Carroll Group
-                    <br />
-                    <span class="badge badge-ghost badge-sm">Tax Accountant</span>
-                </td>
-                <td>Red</td>
-            </tr>
-            <!-- row 3 -->
-            <tr>
-                <td>
-                    <div class="flex items-center gap-3">
-                        <div class="avatar">
-                            <div class="mask mask-squircle h-12 w-12">
-                                <img src="https://img.daisyui.com/tailwind-css-component-profile-4@56w.png"
-                                    alt="Avatar Tailwind CSS Component" />
+                    </td>
+                    <td class="text-xs lg:text-sm p-2 text-center hidden lg:table-cell">mfazrilmaulana@gmail.com</td>
+                    <td class="text-xs lg:text-sm p-2 text-center">1</td>
+                    <td class="text-xs lg:text-sm p-2 text-center hidden min-[470px]:table-cell">22/03/2023, 14:12</td>
+                    <td class="text-xs lg:text-sm p-2 text-center">20 menit</td>
+                </tr>
+                <!-- row 3 -->
+                <tr>
+                    <td class="p-2">
+                        <div class="flex justify-center items-center gap-2">
+                            <div class="hidden md:block flex-shrink-0">
+                                <div class="w-12 h-12 rounded-full overflow-hidden">
+                                    <img class="w-full h-full object-cover" src="./img/user.jpg" alt="">
+                                </div>
                             </div>
+                            <p class="text-xs lg:text-sm">Muhamad Fazril Maulana</p>
                         </div>
-                        <div>
-                            <div class="font-bold">Marjy Ferencz</div>
-                            <div class="text-sm opacity-50">Russia</div>
-                        </div>
-                    </div>
-                </td>
-                <td>
-                    Rowe-Schoen
-                    <br />
-                    <span class="badge badge-ghost badge-sm">Office Assistant I</span>
-                </td>
-                <td>Crimson</td>
-            </tr>
-            <!-- row 4 -->
-            <tr>
-                <td>
-                    <div class="flex items-center gap-3">
-                        <div class="avatar">
-                            <div class="mask mask-squircle h-12 w-12">
-                                <img src="https://img.daisyui.com/tailwind-css-component-profile-5@56w.png"
-                                    alt="Avatar Tailwind CSS Component" />
-                            </div>
-                        </div>
-                        <div>
-                            <div class="font-bold">Yancy Tear</div>
-                            <div class="text-sm opacity-50">Brazil</div>
-                        </div>
-                    </div>
-                </td>
-                <td>
-                    Wyman-Ledner
-                    <br />
-                    <span class="badge badge-ghost badge-sm">Community Outreach Specialist</span>
-                </td>
-                <td>Indigo</td>
-            </tr>
-        </tbody>
-    </table>
-</div> --}}
+                    </td>
+                    <td class="text-xs lg:text-sm p-2 text-center hidden lg:table-cell">mfazrilmaulana@gmail.com</td>
+                    <td class="text-xs lg:text-sm p-2 text-center">1</td>
+                    <td class="text-xs lg:text-sm p-2 text-center hidden min-[470px]:table-cell">22/03/2023, 14:12</td>
+                    <td class="text-xs lg:text-sm p-2 text-center">20 menit</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+</div>

@@ -5,15 +5,15 @@ const humbergerBtn = document.querySelector("#hamburger-menu-admin");
 const closeBtn = document.querySelector("#close-admin-button");
 const adminSidebar = document.querySelector("#admin-sidebar");
 
-profileBtn.addEventListener("click", function () {
+profileBtn.addEventListener("click", () => {
     profilSvgIcon.classList.toggle("rotate-180");
     profileMenu.classList.toggle("hidden");
 });
 
-humbergerBtn.addEventListener("click", function () {
+humbergerBtn.addEventListener("click", () => {
     adminSidebar.classList.toggle("-translate-x-full");
 });
 
-closeBtn.addEventListener("click", function () {
+closeBtn.addEventListener("click", () => {
     adminSidebar.classList.toggle("-translate-x-full");
 });
