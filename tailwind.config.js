@@ -6,7 +6,18 @@ export default {
         "./resources/**/*.vue",
     ],
     theme: {
-        extend: {},
+        extend: {
+            colors: {
+                green: {
+                    head: "#064E3B",
+                    circle: "#2F6B5C",
+                },
+                yellow_blob: "#DAB61C",
+            },
+            screens: {
+                xs: "594px",
+            },
+        },
     },
     plugins: [require("daisyui")],
 };

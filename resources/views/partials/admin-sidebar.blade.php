@@ -3,7 +3,8 @@
     id="admin-sidebar">
     <div class="p-4 flex sm:block">
         <a href="#">
-            <h1 class="text-xl sm:text-2xl font-bold">IoTech Industries</h1>
+            <h1 class="text-xl sm:text-2xl font-bold tracking-wide" style="font-family: Boogaloo">AIo Tech Industries
+            </h1>
         </a>
         <button class=" border-slate-600 border-2 rounded-sm sm:hidden" id="close-admin-button">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="rgba(255,255,255,1)" width="32">

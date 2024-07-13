@@ -1,4 +1,4 @@
-<header class="bg-white dark:bg-gray-800 shadow-md flex items-center justify-between p-4">
+<header class="bg-white shadow-md flex items-center justify-between p-4">
     <div class="flex items-center">
         {{-- Humberger Button --}}
         <button class=" sm:hidden border-gray-100 border-2 rounded-sm" id="hamburger-menu-admin">
@@ -7,7 +7,8 @@
             </svg>
         </button>
         <!-- Logo -->
-        <div class="text-2xl font-bold text-gray-900 dark:text-gray-100 ml-4">IoTech</div>
+        <div class="text-2xl font-bold text-slate-800 ml-4 tracking-wide " style="font-family: Boogaloo">
+            AIo Tech Industries</div>
     </div>
     <div class="flex items-center">
         <!-- User Profile -->
@@ -28,9 +29,8 @@
                 </svg>
             </button>
             <div id="profile-dropdown-menu"
-                class="hidden absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg py-2 z-20">
-                <a href="#"
-                    class="block px-4 py-2 text-gray-800 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-900">
+                class="hidden absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 z-20">
+                <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">
                     <div class="flex gap-2">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="rgba(0,0,0,1)" width="18">
                             <path
@@ -40,8 +40,7 @@
                         <p>Profile</p>
                     </div>
                 </a>
-                <a href="#"
-                    class="block px-4 py-2 text-gray-800 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-900">
+                <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">
                     <div class="flex gap-2">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="rgba(0,0,0,1)" width="18">
                             <path

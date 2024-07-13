@@ -35,4 +35,9 @@ class AdminController extends Controller
         ]);
     }
 
+    public function signIn()
+    {
+        return view('admin.sign-in', ['title' => 'Admin | Sign In']);
+    }
+
 }
