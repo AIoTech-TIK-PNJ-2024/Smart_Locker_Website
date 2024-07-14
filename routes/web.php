@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\LockerController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -16,6 +17,5 @@ Route::get('/admin-riwayat-peminjaman', [AdminController::class, 'riwayatPeminja
 Route::get('/admin-daftar-ulasan', [AdminController::class, 'daftarUlasan']);
 
 // Locker
-Route::get('/locker', function() {
-    return view('layout/locker-layout', ['title' => 'Peminjaman Loker']);
-});
+Route::get('/locker/login', [LockerController::class, 'login']);
+Route::get('/locker/verify_email', [LockerController::class, 'verify_email']);
