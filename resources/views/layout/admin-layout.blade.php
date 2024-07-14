@@ -1,7 +1,7 @@
 @extends('layout.head')
 @section('body')
 
-    <body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100" style="font-family: poppins">
+    <body class="bg-gray-100 text-gray-900" style="font-family: poppins">
         <div class="flex relative">
             <!-- Sidebar -->
             @include('partials.admin-sidebar')

@@ -16,6 +16,6 @@ Route::get('/admin-riwayat-peminjaman', [AdminController::class, 'riwayatPeminja
 Route::get('/admin-daftar-ulasan', [AdminController::class, 'daftarUlasan']);
 
 // Locker
-Route::get('/locker', function() {
+Route::get('/locker', function () {
     return view('layout/locker-layout', ['title' => 'Peminjaman Loker']);
 });

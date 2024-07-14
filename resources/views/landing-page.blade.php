@@ -1,7 +1,7 @@
 @extends('layout.head')
 @section('body')
 
-    <body class="relative" style="font-family: poppins">
+    <body style="font-family: poppins" class="overflow-x-hidden bg-white">
         <header>
             {{-- desktop --}}
             <nav
@@ -28,7 +28,7 @@
                 <div class="xs:flex gap-3 min-[805px]:gap-8 lg:gap-20 hidden">
                     <a href="#" class="">
                         <div
-                            class="text-white font-bold text-sm min-[805px]:text-base lg:text-lg p-1 border-white border-b-2">
+                            class="text-white after:font-bold text-sm min-[805px]:text-base lg:text-lg p-1 after:border-white after:border-b-2">
                             <p>Dashboard</p>
                         </div>
                     </a>
@@ -54,9 +54,8 @@
                         In</a>
                 </div>
             </nav>
-
             {{-- mobile --}}
-            <nav class="bg-green-head fixed top-0 right-0 left-0 bottom-0 p-3 -translate-y-full transition duration-1000 xs:-translate-y-full"
+            <nav class="bg-green-head fixed top-0 right-0 left-0 bottom-0 p-3 -translate-y-full transition duration-1000 xs:-translate-y-full z-40"
                 id="nav-menu">
                 <div class="w-full h-[1px] bg-white mt-14 mb-3 rounded-full"></div>
                 <div class="flex flex-col gap-3">
@@ -82,9 +81,47 @@
 
         <main>
             {{-- bagian 1 --}}
-
+            <section>
+                <div class="relative w-screen h-screen">
+                    <img src="/img/elipse.png" alt="shape1" class="w-full h-full hidden sm:block object-cover">
+                    <img src="/img/frame1.png" alt="shape1" class="w-full h-full sm:hidden object-cover">
+                    <div
+                        class="pt-16 sm:pt-28 md:pt-16 flex flex-col sm:flex-row-reverse sm:justify-evenly items-center px-6 md:px-1 absolute top-0 right-0 left-0">
+                        <div class="w-72 md:w-96 lg:w-[520px]">
+                            <img src="/img/locker1.png" alt="locker" class="w-full h-full object-cover">
+                        </div>
+                        <div class="max-w-96">
+                            <h2 class="text-3xl lg:text-4xl text-white font-bold">Smart Locker</h2>
+                            <p class="mb-4 md:mb-7 lg:text-lg text-white">Lorem ipsum dolor sit, amet consectetur
+                                adipisicing
+                                elit. Minus ab aliquam earum blanditiis! Eum, quasi.</p>
+                            <a href="#" class="bg-white py-2 px-5 md:px-10 rounded-xl hover:bg-slate-100">Coba
+                                Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sm:hidden -mt-1">
+                    <img src="/img/wave.png" alt="wave">
+                </div>
+            </section>
             {{-- bagian 2 --}}
+            <section class="px-4 py-24">
+                <div class="flex gap-10 flex-col sm:flex-row sm:justify-around items-center">
+                    <div class="w-64 md:w-96 lg:w-[450px]">
+                        <img src="/img/locker2.png" alt="locker" class="w-full h-full object-cover">
+                    </div>
+                    <div class="max-w-96">
+                        <h2 class="text-3xl lg:text-4xl text-black font-bold">Deskripsi Produk</h2>
+                        <p class="mb-4 md:mb-7 lg:text-lg text-black">Lorem ipsum dolor sit, amet consectetur
+                            adipisicing
+                            elit. Minus ab aliquam earum blanditiis! Eum, quasi.</p>
+                    </div>
+                </div>
+            </section>
             {{-- bagian 3 --}}
+            <section>
+                {{-- <img src="/img/section3.png" alt="section3" class="w-full h-full  object-cover"> --}}
+            </section>
             {{-- bagian 4 --}}
             {{-- bagian 5 --}}
         </main>
