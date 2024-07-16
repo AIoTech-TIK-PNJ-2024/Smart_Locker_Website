@@ -1,5 +1,5 @@
 <aside
-    class="w-52 sm:w-64 bg-slate-800 text-white min-h-screen z-50 -translate-x-full transition duration-500 absolute sm:translate-x-0 sm:fixed"
+    class="w-52 sm:w-64 bg-slate-800 text-white min-h-screen z-50 -translate-x-full transition duration-500 fixed sm:translate-x-0 sm:fixed"
     id="admin-sidebar">
     <div class="p-4 flex sm:block">
         <a href="#">

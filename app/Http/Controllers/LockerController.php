@@ -27,4 +27,10 @@ class LockerController extends Controller
             'title' => 'Terima Kasih telah menggunakan Smart Locker'
         ]);
     }
+
+    public function review(){
+        return view('locker.review', [
+            'title' => 'Ulasan | Peminjaman Loker'
+        ]);
+    }
 }
