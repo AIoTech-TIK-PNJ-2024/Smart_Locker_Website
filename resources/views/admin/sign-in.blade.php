@@ -1,4 +1,7 @@
 @extends('layout.head')
 @section('body')
-    <h1>sign in admin</h1>
+<a href="/admin-dashboard">
+    <h1><button class="btn btn-error">sign in admin</button></h1>
+</a>
+
 @endsection
