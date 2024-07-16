@@ -1,13 +1,13 @@
 @extends('layout.admin-layout')
 @section('content')
-<!-- <h1>daftar peminjaman</h1> -->
+<!-- <h1>Daftar Locker</h1> -->
 <div class="bg-white rounded-sm shadow-md mb-4">
     <div class="bg-white shadow-md flex items-center justify-between p-4">
-        <h2 class="text-2xl text-slate-600 font-bold mx-2">Daftar Peminjaman</h2>
+        <h2 class="text-2xl text-slate-600 font-bold mx-2">Daftar Locker</h2>
         <div class="breadcrumbs text-sm">
             <ul>
                 <li><a href=" /admin-dashboard">Dashboard</a></li>
-                <li>Daftar Peminjaman</li>
+                <li>Daftar Locker</li>
             </ul>
         </div>
     </div>
