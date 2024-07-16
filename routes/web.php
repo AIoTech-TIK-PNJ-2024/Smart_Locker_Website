@@ -19,3 +19,5 @@ Route::get('/admin-daftar-ulasan', [AdminController::class, 'daftarUlasan']);
 // Locker
 Route::get('/locker/login', [LockerController::class, 'login']);
 Route::get('/locker/verify_email', [LockerController::class, 'verify_email']);
+Route::get('/locker/home', [LockerController::class, 'home']);
+Route::get('/locker/terimakasih', [LockerController::class, 'terimakasih']);
