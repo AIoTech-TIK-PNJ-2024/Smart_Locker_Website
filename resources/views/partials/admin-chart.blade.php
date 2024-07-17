@@ -22,7 +22,7 @@
         <div class="w-full px-8">
             <div class="flex w-full items-center">
                 <span class="mr-2 block h-3 w-full max-w-3 rounded-full bg-[#6577F3]"></span>
-                <p class="flex w-full justify-between text-sm font-medium text-black dark:text-white">
+                <p class="flex w-full justify-between text-sm font-medium text-black">
                     <span> Negative </span>
                     <span> 15% </span>
                 </p>
@@ -31,7 +31,7 @@
         <div class="w-full px-8">
             <div class="flex w-full items-center">
                 <span class="mr-2 block h-3 w-full max-w-3 rounded-full bg-[#8FD0EF]"></span>
-                <p class="flex w-full justify-between text-sm font-medium text-black dark:text-white">
+                <p class="flex w-full justify-between text-sm font-medium text-black">
                     <span> Neutral </span>
                     <span> 36% </span>
                 </p>

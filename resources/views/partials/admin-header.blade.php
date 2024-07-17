@@ -21,8 +21,8 @@
                 <div class="w-10 h-10 rounded-full overflow-hidden">
                     <img class="w-full h-full object-cover" src="./img/user.jpg" alt="User Profile">
                 </div>
-                <svg id="dropdown-icon" class="fill-current" width="12" height="8" viewBox="0 0 12 8"
-                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg id="dropdown-icon" class="fill-current" width="12" height="8" viewBox="0 0 12 8" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M0.410765 0.910734C0.736202 0.585297 1.26384 0.585297 1.58928 0.910734L6.00002 5.32148L10.4108 0.910734C10.7362 0.585297 11.2638 0.585297 11.5893 0.910734C11.9147 1.23617 11.9147 1.76381 11.5893 2.08924L6.58928 7.08924C6.26384 7.41468 5.7362 7.41468 5.41077 7.08924L0.410765 2.08924C0.0853277 1.76381 0.0853277 1.23617 0.410765 0.910734Z"
                         fill="" />
@@ -40,7 +40,7 @@
                         <p>Profile</p>
                     </div>
                 </a>
-                <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">
+                <a href="/admin-sign-in" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">
                     <div class="flex gap-2">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="rgba(0,0,0,1)" width="18">
                             <path
