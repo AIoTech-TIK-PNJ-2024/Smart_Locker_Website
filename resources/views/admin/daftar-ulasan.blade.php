@@ -20,6 +20,7 @@
                     <th class="p-2 text-center md:text-sm">NO</th>
                     <th class="p-2 text-center md:text-sm">USERNAME</th>
                     <th class="p-2 text-center md:text-sm">ULASAN</th>
+                    <th class="p-2 text-center md:text-sm">SENTIMEN</th>
                     <th class="p-2 text-center md:text-sm">AKSI</th>
                 </tr>
             </thead>
@@ -31,6 +32,7 @@
                     </td>
                     <td class="text-xs lg:text-sm p-2 text-center">Locker ini sangat bagus, menarik, aman, dan mudah di
                         gunakan</td>
+                    <td class="text-xs lg:text-sm p-2 text-center">Positive</td>
                     <td class="text-xs lg:text-sm p-2 text-center"><button class="btn btn-error">Hapus</button>
                     </td>
                 </tr>
@@ -41,6 +43,7 @@
                     </td>
                     <td class="text-xs lg:text-sm p-2 text-center">Locker dapat di gunakan dengan baik, tetapi sayang
                         nya locker kotor</td>
+                    <td class="text-xs lg:text-sm p-2 text-center">Netral</td>
                     <td class="text-xs lg:text-sm p-2 text-center"><button class="btn btn-error">Hapus</button></td>
                 </tr>
                 <!-- row 3 -->
@@ -50,6 +53,7 @@
                     </td>
                     <td class="text-xs lg:text-sm p-2 text-center">JELEK BANGET, BAU, LUPA PASSWORD MALAH GA DI LADENIN
                         SAMA ADMINNYA </td>
+                    <td class="text-xs lg:text-sm p-2 text-center">Negative</td>
                     <td class="text-xs lg:text-sm p-2 text-center"><button class="btn btn-error">Hapus</button></td>
                 </tr>
                 <!-- row 4 -->
@@ -58,6 +62,7 @@
                     <td class="text-xs lg:text-sm p-2 text-center">rfikeceh
                     </td>
                     <td class="text-xs lg:text-sm p-2 text-center">biasa aja si, ya lumayan lah ya</td>
+                    <td class="text-xs lg:text-sm p-2 text-center">Netral</td>
                     <td class="text-xs lg:text-sm p-2 text-center"><button class="btn btn-error">Hapus</button></td>
                 </tr>
             </tbody>
