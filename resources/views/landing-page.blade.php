@@ -92,9 +92,9 @@
                         </div>
                         <div class="max-w-96 xl:max-w-[750px]">
                             <h2 class="text-3xl lg:text-5xl xl:text-7xl text-white font-bold">Smart Locker</h2>
-                            <p class="mb-4 md:mb-7 lg:text-lg text-white">Lorem ipsum dolor sit, amet consectetur
-                                adipisicing
-                                elit. Minus ab aliquam earum blanditiis! Eum, quasi.</p>
+                            <p class="mb-4 md:mb-7 lg:text-lg text-white">Smart locker adalah inovasi yang dirancang untuk
+                                menyediakan solusi penyimpanan yang aman dan efisien dengan menggunakan teknologi modern
+                                seperti scan barcode dengan IoT tanpa kunci.</p>
                             <a href="#"
                                 class="bg-white py-2 px-5 md:px-10 rounded-xl text-green-head hover:bg-slate-100">Coba
                                 Sekarang</a>
@@ -114,9 +114,11 @@
                     </div>
                     <div class="max-w-96 p-2">
                         <h2 class="text-3xl lg:text-4xl text-black font-bold">Deskripsi Produk</h2>
-                        <p class="mb-4 md:mb-7 lg:text-lg text-black">Lorem ipsum dolor sit, amet consectetur
-                            adipisicing
-                            elit. Minus ab aliquam earum blanditiis! Eum, quasi.</p>
+                        <p class="mb-4 md:mb-7 lg:text-lg text-black">Smart Locker adalah aplikasi web yang memungkinkan
+                            pengguna mengakses dan mengelola loker pintar dengan mudah. Pengguna dapat memindai QR code,
+                            masuk dengan kredensial, dan mendapatkan informasi serta QR code loker. Setelah selesai, mereka
+                            dapat memberikan masukan melalui QR code yang tersedia. Aplikasi ini memiliki antarmuka yang
+                            sederhana dan user-friendly.</p>
                     </div>
                 </div>
             </section>
@@ -250,7 +252,8 @@
                         </div>
                         <div class="p-1 sm:my-1">
                             <h2 class="text-base sm:text-lg xl:text-xl font-bold text-black text-center sm:mb-1">Gery
-                                Satria Halim
+                                Satria
+                                Halim
                             </h2>
                             <p class="text-sm text-black text-center">Lorem, ipsum dolor sit amet consectetur adipisicing.
                             </p>
@@ -278,12 +281,14 @@
                         class="w-72 sm:w-80 md:w-1/3 xl:w-2/5 mx-auto sm:mx-0">
                     <div class="max-w-[460px]">
                         <h3 class="text-xl sm:text-2xl md:text-3xl xl:text-4xl py-2 font-bold text-black">Deskripsi
-                            Aplikasi</h3>
-                        <p class="text-sm sm:text-base text-black md:text-lg">Lorem ipsum dolor sit amet consectetur,
-                            adipisicing
-                            elit. Vel ab,
-                            praesentium
-                            explicabo quaerat eius officia numquam hic nostrum labore? Accusamus.</p>
+                            Aplikasi
+                        </h3>
+                        <p class="text-sm sm:text-base text-black md:text-lg">Smart Locker adalah aplikasi web untuk
+                            mengakses dan mengelola loker pintar. Pengguna memindai QR code loker, masuk dengan username dan
+                            password, dan jika loker terisi, pemilik dapat verifikasi melalui email. Setelah masuk,
+                            informasi loker dan QR code tersedia untuk diunduh. Selesai menggunakan, pengguna menerima
+                            ucapan terima kasih dan QR code untuk memberikan masukan. Antarmuka yang sederhana memastikan
+                            kemudahan penggunaan.</p>
                     </div>
                 </div>
             </section>
@@ -293,7 +298,8 @@
                 <div class="w-full h-[1px] bg-slate-400 rounded-md"></div>
             </div>
             <p class="p-7 text-sm sm:text-base text-black">© 2024 Copyright, AIo Tech-Smart Locker-Politeknik Negeri
-                Jakarta</p>
+                Jakarta
+            </p>
         </footer>
     </body>
 @endsection
