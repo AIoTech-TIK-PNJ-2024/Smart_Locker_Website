@@ -95,7 +95,8 @@
                             <p class="mb-4 md:mb-7 lg:text-lg text-white">Lorem ipsum dolor sit, amet consectetur
                                 adipisicing
                                 elit. Minus ab aliquam earum blanditiis! Eum, quasi.</p>
-                            <a href="#" class="bg-white py-2 px-5 md:px-10 rounded-xl text-green-head hover:bg-slate-100">Coba
+                            <a href="#"
+                                class="bg-white py-2 px-5 md:px-10 rounded-xl text-green-head hover:bg-slate-100">Coba
                                 Sekarang</a>
                         </div>
                     </div>
@@ -106,7 +107,8 @@
             </section>
             {{-- bagian 2 --}}
             <section class="h-screen relative" id="deskripsi">
-                <div class="flex gap-10 flex-col sm:flex-row sm:justify-around justify-center items-center absolute top-0 left-0 right-0 bottom-0">
+                <div
+                    class="flex gap-10 flex-col sm:flex-row sm:justify-around justify-center items-center absolute top-0 left-0 right-0 bottom-0">
                     <div class="w-64 md:w-96 lg:w-[450px] xl:w-[600px]">
                         <img src="/img/locker2.png" alt="locker" class="w-full h-full object-cover">
                     </div>
@@ -131,10 +133,11 @@
                         <div class="sm:max-w-96 lg:max-w-[500px] xl:max-w-[780px] lg:mt-5">
                             <h2 class="font-bold text-lg mb-3 mx-2 lg:text-2xl xl:text-4xl text-black">Apa kata mereka</h2>
                             <div class="max-h-44 md:max-h-64 lg:max-h-80 overflow-y-auto">
-                                <div >
+                                <div>
                                     <div class="bg-yellow-comment max-h-24 p-2 mb-2 rounded-lg">
                                         <p class="text-sm font-bold mb-1 text-white">fazril_gaming</p>
-                                        <p class="text-sm line-clamp-2 text-white">Lorem ipsum dolor, sit amet consectetur adipisicing
+                                        <p class="text-sm line-clamp-2 text-white">Lorem ipsum dolor, sit amet consectetur
+                                            adipisicing
                                             elit.
                                             Eligendi,
                                             ab libero.
@@ -144,7 +147,8 @@
                                     </div>
                                     <div class="bg-yellow-comment max-h-24 p-2 mb-2 rounded-lg">
                                         <p class="text-sm font-bold mb-1 text-white">fazril_gaming</p>
-                                        <p class="text-sm line-clamp-2 text-white">Lorem ipsum dolor, sit amet consectetur adipisicing
+                                        <p class="text-sm line-clamp-2 text-white">Lorem ipsum dolor, sit amet consectetur
+                                            adipisicing
                                             elit.
                                             Eligendi,
                                             ab libero.
@@ -154,7 +158,8 @@
                                     </div>
                                     <div class="bg-yellow-comment max-h-24 p-2 mb-2 rounded-lg">
                                         <p class="text-sm font-bold mb-1 text-white">fazril_gaming</p>
-                                        <p class="text-sm line-clamp-2 text-white">Lorem ipsum dolor, sit amet consectetur adipisicing
+                                        <p class="text-sm line-clamp-2 text-white">Lorem ipsum dolor, sit amet consectetur
+                                            adipisicing
                                             elit.
                                             Eligendi,
                                             ab libero.
@@ -162,7 +167,7 @@
                                             facilis
                                         </p>
                                     </div>
-                                    
+
                                 </div>
                             </div>
                             <div class="mt-1 md:mt-3">
@@ -189,7 +194,8 @@
                         </div>
                         <div class="relative">
                             <div class="flex justify-center">
-                                <img src="/img/blob.png" alt="" class="w-[350px] sm:w-[380px] lg:w-[400px] xl:w-[500px]">
+                                <img src="/img/blob.png" alt=""
+                                    class="w-[350px] sm:w-[380px] lg:w-[400px] xl:w-[500px]">
                             </div>
                             <form action=""
                                 class="bg-green-head/30 rounded-md mt-4 p-2 absolute top-3 lg:top-9 right-0 left-0">
@@ -208,7 +214,8 @@
             </section>
             {{-- bagian 4 --}}
             <section class="mb-7" id="tim">
-                <h1 class="text-black font-bold text-3xl lg:text-4xl xl:text-5xl my-4 sm:my-12 mt-4 text-center">Tim Kami</h1>
+                <h1 class="text-black font-bold text-3xl lg:text-4xl xl:text-5xl my-4 sm:my-12 mt-4 text-center">Tim Kami
+                </h1>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
                     <div class="">
@@ -216,7 +223,8 @@
                             <img src="/img/tim1.png" alt="tim1" class="w-full object-cover">
                         </div>
                         <div class="p-1 sm:my-1">
-                            <h2 class="text-base sm:text-lg xl:text-xl font-bold text-black text-center sm:mb-1">Nabiilah Putri
+                            <h2 class="text-base sm:text-lg xl:text-xl font-bold text-black text-center sm:mb-1">Nabiilah
+                                Putri
                                 Afiifah
                             </h2>
                             <p class="text-sm text-black text-center">Lorem, ipsum dolor sit amet consectetur adipisicing.
@@ -228,7 +236,8 @@
                             <img src="/img/tim2.png" alt="tim2" class="w-full object-cover">
                         </div>
                         <div class="p-1 sm:my-1">
-                            <h2 class="text-base sm:text-lg xl:text-xl font-bold text-black text-center sm:mb-1">Muhamad Fazril
+                            <h2 class="text-base sm:text-lg xl:text-xl font-bold text-black text-center sm:mb-1">Muhamad
+                                Fazril
                                 Maulana
                             </h2>
                             <p class="text-sm text-black text-center">Lorem, ipsum dolor sit amet consectetur adipisicing.
@@ -240,7 +249,8 @@
                             <img src="/img/tim3.png" alt="tim3" class="w-full object-cover">
                         </div>
                         <div class="p-1 sm:my-1">
-                            <h2 class="text-base sm:text-lg xl:text-xl font-bold text-black text-center sm:mb-1">Gery Satria Halim
+                            <h2 class="text-base sm:text-lg xl:text-xl font-bold text-black text-center sm:mb-1">Gery
+                                Satria Halim
                             </h2>
                             <p class="text-sm text-black text-center">Lorem, ipsum dolor sit amet consectetur adipisicing.
                             </p>
@@ -251,7 +261,8 @@
                             <img src="/img/tim4.png" alt="tim4" class="w-full object-cover">
                         </div>
                         <div class="p-1 sm:my-1">
-                            <h2 class="text-base sm:text-lg xl:text-xl font-bold text-black text-center sm:mb-1">Mohamad Rafi Al-Yahya
+                            <h2 class="text-base sm:text-lg xl:text-xl font-bold text-black text-center sm:mb-1">Mohamad
+                                Rafi Al-Yahya
                             </h2>
                             <p class="text-sm text-black text-center">Lorem, ipsum dolor sit amet consectetur adipisicing.
                             </p>
@@ -263,10 +274,13 @@
             <section class="p-8 mb-4">
                 <div
                     class="bg-bluelight shadow-lg rounded-lg p-2 flex flex-col sm:flex-row sm:justify-around items-center">
-                    <img src="/img/smartphone.png" alt="smartphone" class="w-72 sm:w-80 md:w-1/3 xl:w-2/5 mx-auto sm:mx-0">
+                    <img src="/img/smartphone.png" alt="smartphone"
+                        class="w-72 sm:w-80 md:w-1/3 xl:w-2/5 mx-auto sm:mx-0">
                     <div class="max-w-[460px]">
-                        <h3 class="text-xl sm:text-2xl md:text-3xl xl:text-4xl py-2 font-bold text-black">Deskripsi Aplikasi</h3>
-                        <p class="text-sm sm:text-base text-black md:text-lg">Lorem ipsum dolor sit amet consectetur, adipisicing
+                        <h3 class="text-xl sm:text-2xl md:text-3xl xl:text-4xl py-2 font-bold text-black">Deskripsi
+                            Aplikasi</h3>
+                        <p class="text-sm sm:text-base text-black md:text-lg">Lorem ipsum dolor sit amet consectetur,
+                            adipisicing
                             elit. Vel ab,
                             praesentium
                             explicabo quaerat eius officia numquam hic nostrum labore? Accusamus.</p>
@@ -278,7 +292,8 @@
             <div class="px-4">
                 <div class="w-full h-[1px] bg-slate-400 rounded-md"></div>
             </div>
-            <p class="p-7 text-sm sm:text-base text-black">© 2024 Copyright, AIo Tech-Smart Locker-Politeknik Negeri Jakarta</p>
+            <p class="p-7 text-sm sm:text-base text-black">© 2024 Copyright, AIo Tech-Smart Locker-Politeknik Negeri
+                Jakarta</p>
         </footer>
     </body>
 @endsection

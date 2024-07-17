@@ -2,8 +2,12 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\Locker;
+use App\Models\Pengguna;
+use App\Models\Review;
+use App\Models\RiwayatPeminjaman;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,11 +17,21 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+        // default jumlah loker 3
+        for ($i = 1; $i <= 3; $i++) {
+            Locker::factory()->create([
+                'nomor_locker' => $i,
+            ]);
+        }
+
+        // pengguna random 3
+        Pengguna::factory(3)->create();
+
+        //review 5
+        Review::factory(5)->create();
+
+        // riwayat peminjaman 8
+        RiwayatPeminjaman::factory(8)->create();
     }
 }
