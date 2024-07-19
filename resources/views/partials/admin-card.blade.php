@@ -12,11 +12,11 @@
             <h3 class="font-bold text-lg text-slate-600 mx-3 xl:text-xl">Jumlah Loker</h3>
         </div>
         <div class="ml-24 flex items-end">
-            <span class="text-5xl text-slate-600 mx-1 xl:text-6xl">13</span>
+            <span class="text-5xl text-slate-600 mx-1 xl:text-6xl">{{ $locker }}</span>
             <p class="mb-1 text-slate-600 xl:text-lg">Loker</p>
         </div>
     </div>
-    {{-- card 1 --}}
+    {{-- card 2 --}}
     <div class="bg-white shadow-md rounded-sm px-2 py-5 overflow-hidden">
         <div class="flex items-center mb-2">
             <div class="bg-cyan-400/20 w-12 h-12 rounded-full flex p-2">
@@ -29,11 +29,11 @@
             <h3 class="font-bold text-lg text-slate-600 mx-3 xl:text-xl">Jumlah Peminjam</h3>
         </div>
         <div class="ml-24 flex items-end">
-            <span class="text-5xl text-slate-600 mx-1 xl:text-6xl">10</span>
+            <span class="text-5xl text-slate-600 mx-1 xl:text-6xl">{{ $pengguna }}</span>
             <p class="mb-1 text-slate-600 xl:text-lg">Peminjam</p>
         </div>
     </div>
-    {{-- card 1 --}}
+    {{-- card 3 --}}
     <div class="bg-white shadow-md rounded-sm px-2 py-5 overflow-hidden">
         <div class="flex items-center mb-2">
             <div class="bg-cyan-400/20 w-12 h-12 rounded-full flex p-2">
@@ -46,7 +46,7 @@
             <h3 class="font-bold text-lg text-slate-600 mx-3 xl:text-xl">Jumlah Ulasan</h3>
         </div>
         <div class="ml-24 flex items-end">
-            <span class="text-5xl text-slate-600 mx-1 xl:text-6xl">4</span>
+            <span class="text-5xl text-slate-600 mx-1 xl:text-6xl">{{ $ulasan }}</span>
             <p class="mb-1 text-slate-600 xl:text-lg">Ulasan</p>
         </div>
     </div>

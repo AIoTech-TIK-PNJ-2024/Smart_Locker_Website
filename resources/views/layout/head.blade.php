@@ -24,6 +24,7 @@
     {{-- remix icon --}}
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
 
+    @vite('public/css/style.css')
     @vite('resources/css/app.css')
     <title>{{ $title }}</title>
 </head>
@@ -32,6 +33,6 @@
 
 <script src="./js/admin.js"></script>
 <script src="./js/script.js"></script>
-<script type="module" src="./js/admin-chart.js" defer></script>
+<script src="./js/admin-chart.js" defer></script>
 
 </html>

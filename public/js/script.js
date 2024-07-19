@@ -22,3 +22,12 @@ menuItems.forEach((item) => {
         close.classList.toggle("hidden");
     });
 });
+
+// Ambil elemen alert success
+let successAlert = document.getElementById("toast");
+// Sembunyikan pesan sukses setelah 5 detik
+if (successAlert) {
+    setTimeout(function () {
+        successAlert.classList.add("hidden");
+    }, 3000); // 3000 milidetik = 3 detik
+}

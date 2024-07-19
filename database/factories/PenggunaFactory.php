@@ -20,7 +20,7 @@ class PenggunaFactory extends Factory
     public function definition(): array
     {
         return [
-            'username' => fake()->userName(),
+            'username' => fake()->name(),
             'password' => static::$password ??= Hash::make('password'),
             'kode_barcode' => fake()->randomNumber(7, true),
             'id_locker' => fake()->numberBetween(1, 3),

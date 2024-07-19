@@ -1,4 +1,4 @@
-<div class="col-span-12 rounded-sm border border-stroke bg-white px-5 pb-5 pt-7 shadow-sm sm:px-7 xl:col-span-5">
+<div class="col-span-12 h-full rounded-sm border border-stroke bg-white px-5 pb-5 pt-7 shadow-sm sm:px-7 xl:col-span-5">
     <div class="mb-3">
         <div>
             <h4 class="text-2xl text-slate-600 font-bold">

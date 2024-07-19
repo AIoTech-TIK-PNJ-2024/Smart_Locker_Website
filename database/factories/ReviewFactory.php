@@ -18,6 +18,7 @@ class ReviewFactory extends Factory
     {
         $sentimen = ['Positive', 'Negative', 'Neutral'];
         return [
+            'nama' => fake()->name(),
             'review' => fake()->sentence(rand(6, 8)),
             'sentimen' => $sentimen[rand(0, 2)],
         ];

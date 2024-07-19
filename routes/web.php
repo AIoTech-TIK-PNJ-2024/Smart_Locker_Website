@@ -1,12 +1,12 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\IndexController;
 use App\Http\Controllers\LockerController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('landing-page', ['title' => 'Landing Page']);
-});
+Route::get('/', [IndexController::class, 'index']);
+Route::post('/index-review', [IndexController::class, 'review']);
 
 // Admin
 Route::get('/admin-dashboard', [AdminController::class, 'dashboard']);
@@ -22,4 +22,3 @@ Route::get('/locker/verify_email', [LockerController::class, 'verify_email']);
 Route::get('/locker/home', [LockerController::class, 'home']);
 Route::get('/locker/terimakasih', [LockerController::class, 'terimakasih']);
 Route::get('/locker/review', [LockerController::class, 'review']);
-

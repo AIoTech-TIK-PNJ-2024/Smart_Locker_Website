@@ -1,7 +1,7 @@
 @extends('layout.head')
 @section('body')
 
-    <body style="font-family: poppins" class="overflow-x-hidden bg-white">
+    <body style="font-family: poppins" class="relative overflow-x-hidden bg-white">
         <header>
             {{-- desktop --}}
             <nav
@@ -28,7 +28,7 @@
                 <div class="xs:flex gap-3 min-[805px]:gap-8 lg:gap-20 xl:gap-32 hidden">
                     <a href="#dashboard" class="">
                         <div
-                            class="text-white font-bold text-sm min-[805px]:text-base lg:text-lg p-1 border-white border-b-2">
+                            class="text-white font-bold border-white border-b-2 text-sm min-[805px]:text-base lg:text-lg p-1 ">
                             <p>Dashboard</p>
                         </div>
                     </a>
@@ -78,7 +78,6 @@
             </nav>
 
         </header>
-
         <main>
             {{-- bagian 1 --}}
             <section id="dashboard">
@@ -130,46 +129,20 @@
                     <img src="/img/frame2.png" alt="frame2" class="sm:hidden w-screen h-screen object-cover">
                     <img src="/img/wave3.png" alt="frame2" class="sm:hidden w-full object-cover">
                 </div>
-                <div class="absolute top-12 min-[420px]:top-24 sm:pt-14 md:pt-16 lg:pt-40 xl:pt-80 left-0 right-0 p-2">
+                <div class="absolute top-12 min-[420px]:top-24 sm:pt-14 md:pt-16 lg:pt-40 xl:pt-64 left-0 right-0 p-2">
                     <div class="flex flex-col sm:flex-row sm:justify-around justify-center sm:gap-3">
-                        <div class="sm:max-w-96 lg:max-w-[500px] xl:max-w-[780px] lg:mt-5">
+                        <div class="sm:w-96 lg:w-[500px] xl:w-[780px] lg:mt-5">
                             <h2 class="font-bold text-lg mb-3 mx-2 lg:text-2xl xl:text-4xl text-black">Apa kata mereka</h2>
                             <div class="max-h-44 md:max-h-64 lg:max-h-80 overflow-y-auto">
                                 <div>
-                                    <div class="bg-yellow-comment max-h-24 p-2 mb-2 rounded-lg">
-                                        <p class="text-sm font-bold mb-1 text-white">fazril_gaming</p>
-                                        <p class="text-sm line-clamp-2 text-white">Lorem ipsum dolor, sit amet consectetur
-                                            adipisicing
-                                            elit.
-                                            Eligendi,
-                                            ab libero.
-                                            Aspernatur, consequuntur at! Sit fugiat, vitae fugit pariatur repudiandae,
-                                            facilis
-                                        </p>
-                                    </div>
-                                    <div class="bg-yellow-comment max-h-24 p-2 mb-2 rounded-lg">
-                                        <p class="text-sm font-bold mb-1 text-white">fazril_gaming</p>
-                                        <p class="text-sm line-clamp-2 text-white">Lorem ipsum dolor, sit amet consectetur
-                                            adipisicing
-                                            elit.
-                                            Eligendi,
-                                            ab libero.
-                                            Aspernatur, consequuntur at! Sit fugiat, vitae fugit pariatur repudiandae,
-                                            facilis
-                                        </p>
-                                    </div>
-                                    <div class="bg-yellow-comment max-h-24 p-2 mb-2 rounded-lg">
-                                        <p class="text-sm font-bold mb-1 text-white">fazril_gaming</p>
-                                        <p class="text-sm line-clamp-2 text-white">Lorem ipsum dolor, sit amet consectetur
-                                            adipisicing
-                                            elit.
-                                            Eligendi,
-                                            ab libero.
-                                            Aspernatur, consequuntur at! Sit fugiat, vitae fugit pariatur repudiandae,
-                                            facilis
-                                        </p>
-                                    </div>
-
+                                    @foreach ($review as $item)
+                                        <div class="bg-yellow-comment max-h-24 p-2 mb-2 rounded-lg">
+                                            <p class="text-sm lg:text-base tracking-wide font-bold mb-1 text-white">
+                                                {{ $item->nama }}
+                                            </p>
+                                            <p class="text-sm lg:text-base line-clamp-2 text-white">{{ $item->review }}</p>
+                                        </div>
+                                    @endforeach
                                 </div>
                             </div>
                             <div class="mt-1 md:mt-3">
@@ -199,14 +172,15 @@
                                 <img src="/img/blob.png" alt=""
                                     class="w-[350px] sm:w-[380px] lg:w-[400px] xl:w-[500px]">
                             </div>
-                            <form action=""
+                            <form action="/index-review" method="post"
                                 class="bg-green-head/30 rounded-md mt-4 p-2 absolute top-3 lg:top-9 right-0 left-0">
+                                @csrf
                                 <p class="text-white text-lg lg:text-xl font-bold text-center py-3">Kirimkan Pendapatmu</p>
-                                <input type="text" name="nama" id="nama" placeholder="Masukan namamu*"
+                                <input type="text" name="nama" id="nama" placeholder="Masukan namamu"
                                     class="w-full p-2 border-2 border-white/70 bg-inherit my-2 lg:mb-4 rounded-md text-white focus:outline-none"
                                     autocomplete="off">
-                                <textarea name="ulasan" id="ulasan" rows="4" placeholder="Masukan pendapatmu disini*"
-                                    class="w-full bg-inherit rounded-md border-2 border-white/70 p-2 text-white focus:outline-none"></textarea>
+                                <textarea name="review" id="review" rows="4" placeholder="Masukan pendapatmu disini*"
+                                    class="w-full bg-inherit rounded-md border-2 border-white/70 p-2 text-white focus:outline-none resize-none"></textarea>
                                 <button type="submit"
                                     class="w-full p-1 bg-white text-black text-sm tracking-wider rounded-full my-1 md:text-base font-bold">Kirim</button>
                             </form>
@@ -218,7 +192,6 @@
             <section class="mb-7" id="tim">
                 <h1 class="text-black font-bold text-3xl lg:text-4xl xl:text-5xl my-4 sm:my-12 mt-4 text-center">Tim Kami
                 </h1>
-
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
                     <div class="">
                         <div class="w-52 h-52 xl:w-64 xl:h-64 overflow-hidden mx-auto">
@@ -301,5 +274,13 @@
                 Jakarta
             </p>
         </footer>
+
+        @if (session('success'))
+            <div class="toast transition" id="toast">
+                <div class="alert alert-info">
+                    <span class="">{{ session('success') }}</span>
+                </div>
+            </div>
+        @endif
     </body>
 @endsection
