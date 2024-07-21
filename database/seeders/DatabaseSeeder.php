@@ -8,6 +8,7 @@ use App\Models\Locker;
 use App\Models\Pengguna;
 use App\Models\Review;
 use App\Models\RiwayatPeminjaman;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -26,7 +27,7 @@ class DatabaseSeeder extends Seeder
         }
 
         // pengguna random 3
-        Pengguna::factory(3)->create();
+        User::factory(3)->create();
 
         //review 5
         Review::factory(5)->create();
