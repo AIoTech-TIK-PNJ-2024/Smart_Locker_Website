@@ -9,18 +9,25 @@
                     <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl">
                         Sign in to admin account
                     </h1>
-                    <form class="space-y-4 md:space-y-6" action="#">
+                    <form class="space-y-4 md:space-y-6" action="/admin-authentication" method="post">
+                        @csrf
                         <div>
                             <label for="email" class="block mb-2 text-sm font-medium text-gray-900 ">Your
                                 email</label>
-                            <input type="email" autofocus
+                            <input type="text" autofocus
                                 class="text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 backdrop-blur-xl bg-white/30 white:border-gray-700"
-                                placeholder="name@company.com">
+                                name="email" id="email" placeholder="name@company.com">
+                            @error('email')
+                                <p class="text-red-600">{{ $message }}</p>
+                            @enderror
                         </div>
                         <div>
                             <label for="password" class="block mb-2 text-sm font-medium text-gray-900 ">Password</label>
-                            <input type="password" placeholder="••••••••"
+                            <input type="password" name="password" id="password" placeholder="••••••••"
                                 class="text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 backdrop-blur-xl bg-white/30 white:border-gray-700">
+                            @error('password')
+                                <p class="text-red-600">{{ $message }}</p>
+                            @enderror
                         </div>
 
                         <button type="submit"

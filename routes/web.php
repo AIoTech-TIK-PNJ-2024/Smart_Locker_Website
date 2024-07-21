@@ -11,6 +11,7 @@ Route::post('/index-review', [IndexController::class, 'review']);
 // Admin
 Route::get('/admin-dashboard', [AdminController::class, 'dashboard']);
 Route::get('/admin-sign-in', [AdminController::class, 'signIn']);
+Route::post('/admin-authentication', [AdminController::class, 'authentication']);
 Route::get('/admin-daftar-loker', [AdminController::class, 'daftarLoker']);
 Route::get('/admin-daftar-peminjaman', [AdminController::class, 'daftarPeminjaman']);
 Route::get('/admin-riwayat-peminjaman', [AdminController::class, 'riwayatPeminjaman']);
@@ -22,3 +23,6 @@ Route::get('/locker/verify_email', [LockerController::class, 'verify_email']);
 Route::get('/locker/home', [LockerController::class, 'home']);
 Route::get('/locker/terimakasih', [LockerController::class, 'terimakasih']);
 Route::get('/locker/review', [LockerController::class, 'review']);
+
+// generate barcode test
+Route::get('/generate-qr-code', [LockerController::class, 'barcodeGenerator']);

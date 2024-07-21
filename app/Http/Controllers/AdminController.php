@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Locker;
 use App\Models\Pengguna;
 use App\Models\Review;
-use App\Models\RiwayatPeminjaman;
+use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
@@ -50,6 +50,16 @@ class AdminController extends Controller
     public function signIn()
     {
         return view('admin.sign-in', ['title' => 'Admin | Sign In']);
+    }
+
+    public function authentication(Request $request)
+    {
+        $credentials = $request->validate([
+            'email' => 'required|email:dns|unique:users',
+            'password' => 'required|min:8', // Tambahkan validasi untuk password
+        ]);
+
+        dd($credentials);
     }
 
 }
