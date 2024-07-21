@@ -15,6 +15,7 @@ Route::get('/admin-daftar-loker', [AdminController::class, 'daftarLoker']);
 Route::get('/admin-daftar-peminjaman', [AdminController::class, 'daftarPeminjaman']);
 Route::get('/admin-riwayat-peminjaman', [AdminController::class, 'riwayatPeminjaman']);
 Route::get('/admin-daftar-ulasan', [AdminController::class, 'daftarUlasan']);
+Route::post('/admin-authentication', [AdminController::class, 'authentication']);
 
 // Locker
 Route::get('/locker/login', [LockerController::class, 'login']);

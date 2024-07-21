@@ -28,6 +28,7 @@ class UserFactory extends Factory
             'password' => static::$password ??= Hash::make('password'),
             'kode_barcode' => fake()->randomNumber(7, true),
             'id_locker' => fake()->numberBetween(1, 3),
+            'role' => 'Admin'
         ];
     }
 
