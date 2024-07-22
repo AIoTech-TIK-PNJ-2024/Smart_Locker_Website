@@ -25,6 +25,10 @@ class LockerController extends Controller
 
     public function home()
     {
+        if (Auth::check() && Auth()->user()->role != 'pengguna') {
+            return redirect('/admin-dashboard');
+        }
+
         return view('locker.home', [
             'title' => 'Home | Peminjaman Loker',
         ]);
@@ -32,6 +36,10 @@ class LockerController extends Controller
 
     public function terimakasih()
     {
+        if (Auth::check() && Auth()->user()->role != 'pengguna') {
+            return redirect('/admin-dashboard');
+        }
+
         return view('locker.terimakasih', [
             'title' => 'Terima Kasih telah menggunakan Smart Locker',
         ]);
@@ -39,6 +47,10 @@ class LockerController extends Controller
 
     public function review()
     {
+        if (Auth::check() && Auth()->user()->role != 'pengguna') {
+            return redirect('/admin-dashboard');
+        }
+
         return view('locker.review', [
             'title' => 'Ulasan | Peminjaman Loker',
         ]);
