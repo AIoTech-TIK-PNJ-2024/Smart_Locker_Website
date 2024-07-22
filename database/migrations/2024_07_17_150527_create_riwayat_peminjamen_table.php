@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('username');
             $table->foreignId('id_locker');
+            $table->string('durasi');
             $table->timestamps();
         });
     }

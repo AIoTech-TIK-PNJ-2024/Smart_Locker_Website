@@ -15,9 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('username')->unique();
             $table->string('password');
-            $table->string('role');
-            $table->string('kode_barcode');
-            $table->foreignId('id_locker');
+            $table->enum('role', ['admin', 'pengguna'])->default('pengguna');
+            $table->foreignId('id_locker')->nullable();
             $table->timestamps();
         });
 

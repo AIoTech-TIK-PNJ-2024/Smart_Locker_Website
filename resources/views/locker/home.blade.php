@@ -23,7 +23,7 @@
     <a href='/open-door'
         class="w-full text-center inline-block bg-green-head text-white py-3 my-4 rounded-full font-medium focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-opacity-50">Buka
         Loker</a>
-    <button type="submit"
-        class="w-full bg-transparent text-black border-green-head border-2 py-3 my-1 rounded-full font-medium focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-opacity-50">Selesaikan
-        Penggunaan</button>
+    <a href="/locker/end" type="submit"
+        class="w-full inline-block text-center bg-transparent text-black border-green-head border-2 py-3 my-1 rounded-full font-medium focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-opacity-50">Selesaikan
+        Penggunaan</a>
 @endsection

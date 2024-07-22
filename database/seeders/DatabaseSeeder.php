@@ -5,14 +5,15 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 use App\Models\Locker;
-use App\Models\Pengguna;
 use App\Models\Review;
 use App\Models\RiwayatPeminjaman;
 use App\Models\User;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
+    protected static ?string $password;
     /**
      * Seed the application's database.
      */
@@ -28,6 +29,14 @@ class DatabaseSeeder extends Seeder
 
         // pengguna random 3
         User::factory(3)->create();
+
+        //admin
+        User::factory()->create([
+            'username' => 'admin123',
+            'password' => static::$password ??= Hash::make('admin123'),
+            'id_locker' => null,
+            'role' => 'admin',
+        ]);
 
         //review 5
         Review::factory(5)->create();

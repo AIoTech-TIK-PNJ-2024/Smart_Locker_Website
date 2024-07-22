@@ -19,6 +19,7 @@ class RiwayatPeminjamanFactory extends Factory
         return [
             'username' => fake()->userName(),
             'id_locker' => fake()->numberBetween(1, 3),
+            'durasi' => fake()->randomNumber(2, true),
         ];
     }
 }
