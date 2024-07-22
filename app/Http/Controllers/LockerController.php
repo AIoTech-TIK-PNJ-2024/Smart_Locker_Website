@@ -2,35 +2,40 @@
 
 namespace App\Http\Controllers;
 
-class LockerController extends Controller 
+class LockerController extends Controller
 {
-    public function login(){
+    public function login()
+    {
         return view('locker.login', [
             'title' => 'Login | Peminjaman Loker',
         ]);
     }
 
-    public function verify_email(){
+    public function verify_email()
+    {
         return view('locker.verify-email', [
-            'title' => 'Verify Email | Peminjaman Loker'
+            'title' => 'Verify Email | Peminjaman Loker',
         ]);
     }
 
-    public function home(){
+    public function home()
+    {
         return view('locker.home', [
-            'title' => 'Home | Peminjaman Loker'
+            'title' => 'Home | Peminjaman Loker',
         ]);
     }
 
-    public function terimakasih(){
+    public function terimakasih()
+    {
         return view('locker.terimakasih', [
-            'title' => 'Terima Kasih telah menggunakan Smart Locker'
+            'title' => 'Terima Kasih telah menggunakan Smart Locker',
         ]);
     }
 
-    public function review(){
+    public function review()
+    {
         return view('locker.review', [
-            'title' => 'Ulasan | Peminjaman Loker'
+            'title' => 'Ulasan | Peminjaman Loker',
         ]);
     }
 }

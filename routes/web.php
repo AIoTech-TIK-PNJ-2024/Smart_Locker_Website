@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\LockerController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [IndexController::class, 'index']);
@@ -23,3 +24,5 @@ Route::get('/locker/verify_email', [LockerController::class, 'verify_email']);
 Route::get('/locker/home', [LockerController::class, 'home']);
 Route::get('/locker/terimakasih', [LockerController::class, 'terimakasih']);
 Route::get('/locker/review', [LockerController::class, 'review']);
+
+Route::get('/open-door', [UserController::class, 'openDoor']);

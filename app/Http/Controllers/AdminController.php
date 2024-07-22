@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Locker;
-use App\Models\User;
 use App\Models\Review;
 use App\Models\RiwayatPeminjaman;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -70,7 +70,7 @@ class AdminController extends Controller
         } else {
             return redirect()->back()->withErrors(['error' => 'Email atau password salah.']);
         }
-        
+
         dd($credentials);
     }
 
