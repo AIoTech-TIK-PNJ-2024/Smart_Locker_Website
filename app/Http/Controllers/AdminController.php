@@ -7,6 +7,7 @@ use App\Models\Review;
 use App\Models\RiwayatPeminjaman;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
@@ -33,18 +34,21 @@ class AdminController extends Controller
     {
         return view('admin.daftar-peminjaman', [
             'title' => 'Admin | Daftar Peminjaman',
+            'pengguna' => User::all(),
         ]);
     }
     public function riwayatPeminjaman()
     {
         return view('admin.riwayat-peminjaman', [
             'title' => 'Admin | Riwayat Peminjaman',
+            'riwayat' => RiwayatPeminjaman::all(),
         ]);
     }
     public function daftarUlasan()
     {
         return view('admin.daftar-ulasan', [
             'title' => 'Admin | Daftar Ulasan',
+            'ulasan' => Review::all(),
         ]);
     }
 
@@ -65,13 +69,14 @@ class AdminController extends Controller
 
         $credentials = $request->only('email', 'password');
 
-        if ($credentials['email'] === $email && $credentials['password'] === $pw) {
-            return redirect()->intended('/admin-dashboard');
-        } else {
-            return redirect()->back()->withErrors(['error' => 'Email atau password salah.']);
-        }
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
 
-        dd($credentials);
+            return redirect()->intended('dashboard');
+        }
+        return back()->withErrors([
+            'email' => 'The provided credentials do not match our records.',
+        ])->onlyInput('email');
     }
 
 }

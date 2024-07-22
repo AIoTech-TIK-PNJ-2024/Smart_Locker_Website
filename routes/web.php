@@ -10,13 +10,13 @@ Route::get('/', [IndexController::class, 'index']);
 Route::post('/index-review', [IndexController::class, 'review']);
 
 // Admin
-Route::get('/admin-dashboard', [AdminController::class, 'dashboard']);
+Route::get('/admin-dashboard', [AdminController::class, 'dashboard'])->middleware('auth');
 Route::get('/admin-sign-in', [AdminController::class, 'signIn']);
-Route::get('/admin-daftar-loker', [AdminController::class, 'daftarLoker']);
-Route::get('/admin-daftar-peminjaman', [AdminController::class, 'daftarPeminjaman']);
-Route::get('/admin-riwayat-peminjaman', [AdminController::class, 'riwayatPeminjaman']);
-Route::get('/admin-daftar-ulasan', [AdminController::class, 'daftarUlasan']);
-Route::post('/admin-authentication', [AdminController::class, 'authentication']);
+Route::get('/admin-daftar-loker', [AdminController::class, 'daftarLoker'])->middleware('auth');
+Route::get('/admin-daftar-peminjaman', [AdminController::class, 'daftarPeminjaman'])->middleware('auth');
+Route::get('/admin-riwayat-peminjaman', [AdminController::class, 'riwayatPeminjaman'])->middleware('auth');
+Route::get('/admin-daftar-ulasan', [AdminController::class, 'daftarUlasan'])->middleware('auth');
+Route::post('/admin-authentication', [AdminController::class, 'authentication'])->middleware('auth');
 
 // Locker
 Route::get('/locker/login', [LockerController::class, 'login']);
