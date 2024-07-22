@@ -15,17 +15,16 @@
             </thead>
             <tbody>
                 @foreach ($data as $item)
-                    <tr>
-                        <td class="text-xs lg:text-sm">{{ $loop->iteration }}</td>
-                        <td class="text-xs lg:text-sm">{{ $item->username }}</td>
-                        <td class="text-xs lg:text-sm p-2 text-center">{{ $item->kode_barcode }}
-                        </td>
-                        <td class="text-xs lg:text-sm p-2 text-center">{{ $item->id_locker }}</td>
-                        <td class="text-xs lg:text-sm p-2 text-center">
-                            {{ $item->created_at }}
-                        </td>
-                        <td class="text-xs lg:text-sm p-2 text-center">{{ $item->created_at->diffForHumans() }}</td>
-                    </tr>
+                <tr>
+                    <td class="text-xs lg:text-sm">{{ $loop->iteration }}</td>
+                    <td class="text-xs lg:text-sm">{{ $item->username }}</td>
+                    <td class="text-xs lg:text-sm p-2 text-center">{{ $item->kode_barcode }}
+                    </td>
+                    <td class="text-xs lg:text-sm p-2 text-center">{{ $item->id_locker }}</td>
+                    <td class="text-xs lg:text-sm p-2 text-center">{{ $item->created_at }}
+                    </td>
+                    <td class="text-xs lg:text-sm p-2 text-center">{{ $item->created_at->diffForHumans() }}</td>
+                </tr>
                 @endforeach
             </tbody>
 
