@@ -60,23 +60,28 @@ class AdminController extends Controller
     public function authentication(Request $request)
     {
         $credentials = $request->validate([
-            'email' => 'required|email:dns',
-            'password' => 'required|min:8', // Tambahkan validasi untuk password
+            'email' => 'required|email',
+            'password' => 'required|min:8',
+        ], [
+            'email.required' => 'Username wajib diisi',
+            'email.email' => 'gunakan email dengan format benar',
+            'password.required' => 'Password wajib diisi',
+            'password.min' => 'Minimal berisi 8 karakter',
         ]);
-
-        $email = 'admin@gmail.com';
-        $pw = '1sampai8';
-
-        $credentials = $request->only('email', 'password');
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
-            return redirect()->intended('dashboard');
+            if (Auth::user()->role == 'admin') {
+                return redirect()->intended('/admin/home')->with('sukses', 'Selamat datang ' . Auth::user()->username);
+            } else {
+                Auth::logout();
+                return back()->withErrors(['failed' => 'Anda tidak memiliki akses admin.']);
+            }
         }
         return back()->withErrors([
-            'email' => 'The provided credentials do not match our records.',
-        ])->onlyInput('email');
+            'failed' => 'Username atau password salah.',
+        ]);
     }
 
 }

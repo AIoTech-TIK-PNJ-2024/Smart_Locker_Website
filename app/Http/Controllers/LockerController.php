@@ -53,14 +53,19 @@ class LockerController extends Controller
             'username.required' => 'Username wajib diisi',
             'password.required' => 'Password wajib diisi',
             'password.min:8' => 'minimal berisi 8 karakter',
-
         ]);
 
-        if (!User::where('username', $credentials['username'])->exists()) {
+        $peminjam = User::where('username', $credentials['username'])->first();
+        $peminjam2 = User::where('id_locker', '1')->first();
 
-            User::create([
+        if ($peminjam2 && $peminjam2->username !== $credentials['username']) {
+            return back()->withErrors(['failed' => 'Locker sudah dimiliki pengguna lain.']);
+        }
+
+        if (!$peminjam) {
+            $peminjam = User::create([
                 'username' => $credentials['username'],
-                'password' => $credentials['password'],
+                'password' => bcrypt($credentials['password']),
                 'id_locker' => 1,
             ]);
         }
@@ -70,7 +75,6 @@ class LockerController extends Controller
             return redirect()->intended('/locker/home')->with('sukses', 'selamat datang ' . Auth()->user()->username);
         }
 
-        // Authentication failed
         return back()->withErrors([
             'failed' => 'Username atau password salah.',
         ]);
