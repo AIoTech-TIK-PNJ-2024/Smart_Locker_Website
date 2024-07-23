@@ -22,12 +22,12 @@
                     <form class="space-y-4 md:space-y-6" action="/admin-authentication" method='POST'>
                         @csrf
                         <div>
-                            <label for="email" class="block mb-2 text-sm font-medium text-gray-900 ">Your
+                            <label for="username" class="block mb-2 text-sm font-medium text-gray-900 ">Your
                                 email</label>
-                            <input type="email" name="email" autofocus
+                            <input type="text" name="username" autofocus
                                 class="text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 backdrop-blur-xl bg-white/30 white:border-gray-700"
                                 placeholder="name@company.com">
-                            @error('email')
+                            @error('username')
                                 <p class="text-red-600">{{ $message }}</p>
                             @enderror
                         </div>
