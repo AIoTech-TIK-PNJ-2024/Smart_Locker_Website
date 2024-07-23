@@ -11,8 +11,13 @@ class LockerController extends Controller
 {
     public function login()
     {
+        $peminjam2 = User::where('id_locker', '1')->exists();
+
+        // dd($peminjam2);
+
         return view('locker.login', [
             'title' => 'Login | Peminjaman Loker',
+            'cek' => $peminjam2
         ]);
     }
 
@@ -113,7 +118,7 @@ class LockerController extends Controller
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect('/locker/login');
+        return redirect('/locker/login')->with('selesai', 'Peminjaman loker selesai');
     }
 
 }

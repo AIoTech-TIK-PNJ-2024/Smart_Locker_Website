@@ -5,6 +5,9 @@
             Selamat datang di Smart Locker</h2>
         <p class="lg:text-lg text-base text-black mb-1 leading-relaxed lg:px-8 px-5 pt-5">
             Lakukan pengisian data dibawah ini untuk meminjam loker</p>
+            @if ($cek)
+            <p class="text-2xl text-red-500 font-bold mx-8 ">*Loker sudah dipinjam</p>
+            @endif
         <form class="lg:px-8 px-5 pt-6 pb-9" action="/locker/login" method="post">
             @csrf
             <div class="input bg-slate-300 flex items-center gap-2">
@@ -44,6 +47,16 @@
                     <span>{{ $message }}</span>
                 </div>
             @enderror
+            @if (session('selesai'))
+            <div role="alert" class="alert alert-info">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 shrink-0 stroke-current" fill="none"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span>{{ session('selesai') }}</span>
+            </div>
+            @endif
         </form>
     </div>
 @endsection

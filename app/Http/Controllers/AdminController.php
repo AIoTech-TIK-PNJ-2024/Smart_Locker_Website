@@ -109,9 +109,4 @@ class AdminController extends Controller
         $request->session()->regenerateToken();
         return redirect('/admin-sign-in');
     }
-<<<<<<< HEAD
 }
-=======
-
-}
->>>>>>> e23d208bc337c95a66d4b9bd4e78856049a67e82

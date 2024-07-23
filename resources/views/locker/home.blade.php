@@ -1,7 +1,7 @@
 @extends('layout.locker-layout')
 @section('content')
     <h2 class="lg:text-4xl text-2xl text-black font-extrabold lg:mb-6 mb-3 mt-2 leading-relaxed lg:px-5 lg:pt-10 px-2 pt-2">
-        QR Code Locker 001</h2>
+        Locker 01</h2>
 
     @if (session('sukses'))
         <div role="alert" class="alert alert-info">
@@ -23,7 +23,9 @@
     <a href='/open-door'
         class="w-full text-center inline-block bg-green-head text-white py-3 my-4 rounded-full font-medium focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-opacity-50">Buka
         Loker</a>
-    <a href="/locker/end" type="submit"
-        class="w-full inline-block text-center bg-transparent text-black border-green-head border-2 py-3 my-1 rounded-full font-medium focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-opacity-50">Selesaikan
+    <a href="/locker/end" class="w-full text-center inline-block bg-yellow-600 text-white py-3 my-4 rounded-full font-medium focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-opacity-50">Selesaikan
         Penggunaan</a>
+        <a href='/locker/logout'
+        class="w-full text-center inline-block bg-red-800  text-white py-3 my-4 rounded-full font-medium focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-opacity-50">Logout</a>
+    
 @endsection
