@@ -5,6 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 use App\Models\Locker;
+use App\Models\Review;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
@@ -37,7 +38,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         //review 5
-        // Review::factory(5)->create();
+        Review::factory(15)->create();
 
         // riwayat peminjaman 8
         // RiwayatPeminjaman::factory(8)->create();

@@ -1,5 +1,9 @@
 @extends('layout.admin-layout')
 @section('content')
+    {{-- data sentimen pada chart (hidden) --}}
+    <span class="hidden" id="positiveData">{{ $sentimenData['positive'] }}</span>
+    <span class="hidden" id="negativeData">{{ $sentimenData['negative'] }}</span>
+    <span class="hidden" id="neutralData">{{ $sentimenData['neutral'] }}</span>
     {{-- card card --}}
     @include('partials.admin-card')
     <div class="grid grid-cols-12 gap-3 min-h-[430px]">

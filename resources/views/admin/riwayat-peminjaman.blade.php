@@ -22,7 +22,7 @@
                     @foreach ($riwayat as $item)
                         <tr>
                             <td class="text-xs lg:text-sm p-2 text-center">{{ $loop->iteration }}</td>
-                            <td class="p-2 text-xs lg:text-sm">{{ $item->username }}</td>
+                            <td class="p-2 text-xs lg:text-sm text-center">{{ $item->username }}</td>
                             <td class="text-xs lg:text-sm p-2 text-center">{{ $item->id_locker }}</td>
                             <td class="text-xs lg:text-sm p-2 text-center hidden min-[470px]:table-cell">
                                 {{ $item->created_at }}

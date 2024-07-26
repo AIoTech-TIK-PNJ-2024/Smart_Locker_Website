@@ -15,7 +15,7 @@
                 <span class="mr-2 block h-3 w-full max-w-3 rounded-full bg-primary"></span>
                 <p class="flex w-full justify-between text-sm font-medium text-black">
                     <span> Positive </span>
-                    <span> 52% </span>
+                    <span> {{ round(($sentimenData['positive'] / $sentimenData['total']) * 100) }}%</span>
                 </p>
             </div>
         </div>
@@ -24,7 +24,7 @@
                 <span class="mr-2 block h-3 w-full max-w-3 rounded-full bg-[#6577F3]"></span>
                 <p class="flex w-full justify-between text-sm font-medium text-black">
                     <span> Negative </span>
-                    <span> 15% </span>
+                    <span> {{ round(($sentimenData['negative'] / $sentimenData['total']) * 100) }}% </span>
                 </p>
             </div>
         </div>
@@ -33,7 +33,7 @@
                 <span class="mr-2 block h-3 w-full max-w-3 rounded-full bg-[#8FD0EF]"></span>
                 <p class="flex w-full justify-between text-sm font-medium text-black">
                     <span> Neutral </span>
-                    <span> 36% </span>
+                    <span> {{ round(($sentimenData['neutral'] / $sentimenData['total']) * 100) }}% </span>
                 </p>
             </div>
         </div>

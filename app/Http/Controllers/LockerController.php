@@ -17,7 +17,7 @@ class LockerController extends Controller
 
         return view('locker.login', [
             'title' => 'Login | Peminjaman Loker',
-            'cek' => $peminjam2
+            'cek' => $peminjam2,
         ]);
     }
 

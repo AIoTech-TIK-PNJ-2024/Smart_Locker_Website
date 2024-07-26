@@ -1,6 +1,14 @@
 const chart = () => {
+    const positiveData = document.getElementById("positiveData").innerText;
+    const negativeData = document.getElementById("negativeData").innerText;
+    const neutralData = document.getElementById("neutralData").innerText;
+
     const chartOptions = {
-        series: [52, 15, 36],
+        series: [
+            parseInt(positiveData),
+            parseInt(negativeData),
+            parseInt(neutralData),
+        ],
         chart: {
             type: "donut",
             width: 340,

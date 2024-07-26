@@ -17,13 +17,20 @@ class AdminController extends Controller
             return redirect('/locker/home');
         }
 
+        $sentimen = [
+            'positive' => Review::where('sentimen', 'Positive')->count(),
+            'negative' => Review::where('sentimen', 'Negative')->count(),
+            'neutral' => Review::where('sentimen', 'Neutral')->count(),
+            'total' => Review::all()->count()
+        ];
+
         return view('admin.dashboard', [
             'title' => 'Admin | Dashboard',
             'data' => User::where('role', 'pengguna')->get(),
             'locker' => Locker::all()->count(),
             'pengguna' => User::where('role', 'pengguna')->count(),
             'ulasan' => Review::all()->count(),
-
+            'sentimenData' => $sentimen,
         ]);
     }
 
@@ -36,6 +43,7 @@ class AdminController extends Controller
         return view('admin.daftar-loker', [
             'title' => 'Admin | Daftar Loker',
             'locker' => Locker::all(),
+            'status' => User::where('id_locker', 1)->exists(),
         ]);
     }
     public function daftarPeminjaman()
@@ -57,7 +65,7 @@ class AdminController extends Controller
 
         return view('admin.riwayat-peminjaman', [
             'title' => 'Admin | Riwayat Peminjaman',
-            'riwayat' => RiwayatPeminjaman::where('role', 'pengguna')->get(),
+            'riwayat' => RiwayatPeminjaman::all(),
         ]);
     }
     public function daftarUlasan()
@@ -103,7 +111,8 @@ class AdminController extends Controller
         ]);
     }
 
-    public function logout(Request $request){
+    public function logout(Request $request)
+    {
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();

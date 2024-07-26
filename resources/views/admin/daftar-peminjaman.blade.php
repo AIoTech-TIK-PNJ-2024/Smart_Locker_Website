@@ -20,7 +20,6 @@
                         <th class="p-2 text-center md:text-sm">NO</th>
                         <th class="p-2 text-center md:text-sm">USERNAME</th>
                         <th class="p-2 text-center md:text-sm">NO LOCKER</th>
-                        <th class="p-2 text-center md:text-sm">BARCODE</th>
                         <th class="p-2 text-center md:text-sm hidden min-[470px]:block">WAKTU PINJAM</th>
                         <th class="p-2 text-center md:text-sm">DURASI PINJAM</th>
                         <th class="p-2 text-center md:text-sm">AKSI</th>
@@ -30,15 +29,14 @@
                     @foreach ($pengguna as $item)
                         <tr>
                             <td class="text-xs lg:text-sm p-2 text-center">{{ $loop->iteration }}</td>
-                            <td class="p-2 text-xs lg:text-sm">{{ $item->username }}</td>
+                            <td class="p-2 text-xs lg:text-sm text-center">{{ $item->username }}</td>
                             <td class="text-xs lg:text-sm p-2 text-center">{{ $item->id_locker }}</td>
-                            <td class="text-xs lg:text-sm p-2 text-center hidden lg:table-cell">{{ $item->kode_barcode }}
-                            </td>
                             <td class="text-xs lg:text-sm p-2 text-center hidden min-[470px]:table-cell">
                                 {{ $item->created_at }}
                             </td>
                             <td class="text-xs lg:text-sm p-2 text-center">{{ $item->created_at->diffForHumans() }}</td>
-                            <td class="text-xs lg:text-sm p-2 text-center"><button class="btn btn-error">Hapus</button></td>
+                            <td class="text-xs lg:text-sm p-2 text-center"><button
+                                    class="btn btn-error text-white">Hapus</button></td>
                         </tr>
                     @endforeach
                 </tbody>
