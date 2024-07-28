@@ -17,3 +17,12 @@ humbergerBtn.addEventListener("click", () => {
 closeBtn.addEventListener("click", () => {
     adminSidebar.classList.toggle("-translate-x-full");
 });
+
+// Ambil elemen alert success
+let deleteAlert = document.getElementById("toast-delete");
+// Sembunyikan pesan sukses setelah 5 detik
+if (deleteAlert) {
+    setTimeout(function () {
+        deleteAlert.classList.add("hidden");
+    }, 3000); // 3000 milidetik = 3 detik
+}

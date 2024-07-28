@@ -1,3 +1,5 @@
+const emptyData = document.getElementById("emptyData").innerText;
+
 const chart = () => {
     const positiveData = document.getElementById("positiveData").innerText;
     const negativeData = document.getElementById("negativeData").innerText;
@@ -54,5 +56,7 @@ const chart = () => {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-    chart();
+    if (emptyData == 0) {
+        chart();
+    }
 });

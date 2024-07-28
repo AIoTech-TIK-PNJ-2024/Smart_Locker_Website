@@ -6,9 +6,8 @@ namespace Database\Seeders;
 
 use App\Models\Locker;
 use App\Models\Review;
-use App\Models\User;
+use App\Models\RiwayatPeminjaman;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -20,27 +19,25 @@ class DatabaseSeeder extends Seeder
     {
 
         // default jumlah loker 3
-        for ($i = 1; $i <= 1; $i++) {
-            Locker::factory()->create([
-                'nomor_locker' => $i,
-            ]);
-        }
+        Locker::factory()->create([
+            'nomor_locker' => 1,
+        ]);
 
         // pengguna random 3
         // User::factory(3)->create();
 
         //admin
-        User::factory()->create([
-            'username' => 'admin123',
-            'password' => static::$password ??= Hash::make('admin123'),
-            'id_locker' => null,
-            'role' => 'admin',
-        ]);
+        // User::factory()->create([
+        //     'username' => 'admin123',
+        //     'password' => static::$password ??= Hash::make('admin123'),
+        //     'id_locker' => null,
+        //     'role' => 'admin',
+        // ]);
 
         //review 5
-        Review::factory(15)->create();
+        Review::factory(20)->create();
 
         // riwayat peminjaman 8
-        // RiwayatPeminjaman::factory(8)->create();
+        RiwayatPeminjaman::factory(10)->create();
     }
 }

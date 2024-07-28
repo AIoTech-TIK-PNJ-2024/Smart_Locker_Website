@@ -11,7 +11,7 @@
                 <!-- head -->
                 <thead>
                     <tr class="bg-gray-400/20">
-                        <th class="p-2 text-center md:text-sm">NO</th>
+                        <th class="p-2 text-center md:text-sm">ID</th>
                         <th class="p-2 text-center md:text-sm">USERNAME</th>
                         <th class="p-2 text-center md:text-sm">ID LOCKER</th>
                         <th class="p-2 text-center md:text-sm hidden min-[470px]:block">WAKTU PINJAM</th>
@@ -21,7 +21,7 @@
                 <tbody>
                     @foreach ($riwayat as $item)
                         <tr>
-                            <td class="text-xs lg:text-sm p-2 text-center">{{ $loop->iteration }}</td>
+                            <td class="text-xs lg:text-sm p-2 text-center">{{ $item->id }}</td>
                             <td class="p-2 text-xs lg:text-sm text-center">{{ $item->username }}</td>
                             <td class="text-xs lg:text-sm p-2 text-center">{{ $item->id_locker }}</td>
                             <td class="text-xs lg:text-sm p-2 text-center hidden min-[470px]:table-cell">
@@ -33,14 +33,8 @@
                 </tbody>
             </table>
         </div>
-        {{-- <div class="md:p-4 overflow-x-auto text-center bg-white">
-        <div class="join">
-            <input class=" join-item btn btn-square bg-white" type="radio" name="options" aria-label="1"
-                checked="checked" />
-            <input class="join-item btn btn-square bg-white" type="radio" name="options" aria-label="2" />
-            <input class="join-item btn btn-square bg-white" type="radio" name="options" aria-label="3" />
-            <input class="join-item btn btn-square bg-white" type="radio" name="options" aria-label="4" />
+        <div class=" p-2 mx-3">
+            {{ $riwayat->links() }}
         </div>
-    </div> --}}
     </div>
 @endsection

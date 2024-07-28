@@ -26,23 +26,22 @@
                         Tech</h3>
                 </div>
                 <div class="xs:flex gap-3 min-[805px]:gap-8 lg:gap-20 xl:gap-32 hidden">
-                    <a href="#dashboard" class="">
-                        <div
-                            class="text-white font-bold border-white border-b-2 text-sm min-[805px]:text-base lg:text-lg p-1 ">
+                    <a href="#dashboard" id="desktop-dashboard" class="menu-item">
+                        <div class=" text-white  text-sm min-[805px]:text-base lg:text-lg p-1 ">
                             <p>Dashboard</p>
                         </div>
                     </a>
-                    <a href="#deskripsi" class="">
+                    <a href="#deskripsi" id="desktop-deskripsi" class="menu-item">
                         <div class="text-white tracking-wide text-sm min-[805px]:text-base lg:text-lg p-1 border-white">
                             <p>Deskripsi</p>
                         </div>
                     </a>
-                    <a href="#ulasan" class="">
+                    <a href="#ulasan" id="desktop-ulasan" class="menu-item">
                         <div class="text-white tracking-wide text-sm min-[805px]:text-base lg:text-lg p-1 border-white">
                             <p>Ulasan</p>
                         </div>
                     </a>
-                    <a href="#tim" class="">
+                    <a href="#tim" id="desktop-tim" class="menu-item">
                         <div class="text-white tracking-wide text-sm min-[805px]:text-base lg:text-lg p-1 border-white">
                             <p>Tim Kami</p>
                         </div>
@@ -59,19 +58,19 @@
                 id="nav-menu">
                 <div class="w-full h-[1px] bg-white mt-14 mb-3 rounded-full"></div>
                 <div class="flex flex-col gap-3">
-                    <a href="#dashboard"
-                        class="text-white text-lg inline-block w-full text-center p-1 hover:bg-green-circle rounded-xl transition">Dashboard
+                    <a href="#dashboard" id="mobile-dashboard"
+                        class="menu-item text-white text-lg inline-block w-full text-center p-1 hover:bg-green-circle rounded-xl transition">Dashboard
                         > </a>
-                    <a href="#deskripsi"
-                        class="text-white text-lg inline-block w-full text-center p-1 hover:bg-green-circle rounded-xl transition">Deskripsi
+                    <a href="#deskripsi" id="mobile-deskripsi"
+                        class="menu-item text-white text-lg inline-block w-full text-center p-1 hover:bg-green-circle rounded-xl transition">Deskripsi
                         >
                     </a>
-                    <a href="#ulasan"
-                        class="text-white text-lg inline-block w-full text-center p-1 hover:bg-green-circle rounded-xl transition">Ulasan
+                    <a href="#ulasan" id="mobile-ulasan"
+                        class="menu-item text-white text-lg inline-block w-full text-center p-1 hover:bg-green-circle rounded-xl transition">Ulasan
                         >
                     </a>
-                    <a href="#tim"
-                        class="text-white text-lg inline-block w-full text-center p-1 hover:bg-green-circle rounded-xl transition">Tim
+                    <a href="#tim" id="mobile-tim"
+                        class="menu-item text-white text-lg inline-block w-full text-center p-1 hover:bg-green-circle rounded-xl transition">Tim
                         Kami >
                     </a>
                 </div>
@@ -92,11 +91,10 @@
                         <div class="max-w-96 xl:max-w-[750px]">
                             <h2 class="text-3xl lg:text-5xl xl:text-7xl text-white font-bold">Smart Locker</h2>
                             <p class="mb-4 md:mb-7 lg:text-lg text-white">Smart locker adalah inovasi yang dirancang untuk
-                                menyediakan solusi penyimpanan yang aman dan efisien dengan menggunakan teknologi modern
-                                seperti scan barcode dengan IoT tanpa kunci.</p>
-                            <a href="#"
-                                class="bg-white py-2 px-5 md:px-10 rounded-xl text-green-head hover:bg-slate-100">Coba
-                                Sekarang</a>
+                                memudahkan pengguna dalam meminjam loker dengan menggunakan teknologi modern seperti web
+                                access.</p>
+                            <a href="#deskripsi"
+                                class="bg-white py-2 px-5 md:px-10 rounded-xl text-green-head hover:bg-slate-100">Selengkapnya</a>
                         </div>
                     </div>
                 </div>
@@ -107,16 +105,16 @@
             {{-- bagian 2 --}}
             <section class="h-screen relative" id="deskripsi">
                 <div
-                    class="flex gap-10 flex-col sm:flex-row sm:justify-around justify-center items-center absolute top-0 left-0 right-0 bottom-0">
+                    class="flex gap-5 md:gap-10 flex-col sm:flex-row sm:justify-around justify-center items-center absolute top-0 left-0 right-0 bottom-0">
                     <div class="w-64 md:w-96 lg:w-[450px] xl:w-[600px]">
                         <img src="/img/locker2.png" alt="locker" class="w-full h-full object-cover">
                     </div>
                     <div class="max-w-96 p-2">
                         <h2 class="text-3xl lg:text-4xl text-black font-bold">Deskripsi Produk</h2>
                         <p class="mb-4 md:mb-7 lg:text-lg text-black">Smart Locker adalah aplikasi web yang memungkinkan
-                            pengguna mengakses dan mengelola loker pintar dengan mudah. Pengguna dapat memindai QR code,
-                            masuk dengan kredensial, dan mendapatkan informasi serta QR code loker. Setelah selesai, mereka
-                            dapat memberikan masukan melalui QR code yang tersedia. Aplikasi ini memiliki antarmuka yang
+                            pengguna mengakses dan mengelola loker pintar dengan mudah. Pengguna dapat membuka loker hanya
+                            dengan menggunakan aplikasi web dengan cara masuk dengan kredensial. Setelah selesai, pengguna
+                            dapat memberikan ulasan tentang inovasi produk ini. Aplikasi ini memiliki antarmuka yang
                             sederhana dan user-friendly.</p>
                     </div>
                 </div>
@@ -135,35 +133,26 @@
                             <h2 class="font-bold text-lg mb-3 mx-2 lg:text-2xl xl:text-4xl text-black">Apa kata mereka</h2>
                             <div class="max-h-44 md:max-h-64 lg:max-h-80 overflow-y-auto">
                                 <div>
-                                    @foreach ($review as $item)
+                                    @if (!$review->isEmpty())
+                                        @foreach ($review as $item)
+                                            <div class="ulasan bg-yellow-comment max-h-24 p-2 mb-2 rounded-lg">
+                                                <p class="text-sm lg:text-base tracking-wide font-bold mb-1 text-white">
+                                                    {{ $item->nama }}
+                                                </p>
+                                                <p class="text-sm lg:text-base line-clamp-2 text-white">{{ $item->review }}
+                                                </p>
+                                            </div>
+                                        @endforeach
+                                    @else
                                         <div class="bg-yellow-comment max-h-24 p-2 mb-2 rounded-lg">
                                             <p class="text-sm lg:text-base tracking-wide font-bold mb-1 text-white">
-                                                {{ $item->nama }}
+                                                Belum ada ulasan
                                             </p>
-                                            <p class="text-sm lg:text-base line-clamp-2 text-white">{{ $item->review }}</p>
+                                            <p class="text-sm lg:text-base line-clamp-2 text-white">isi ulasan pada kolom
+                                                disamping
+                                            </p>
                                         </div>
-                                    @endforeach
-                                </div>
-                            </div>
-                            <div class="mt-1 md:mt-3">
-                                <div class="flex gap-2 justify-end">
-                                    <button>
-                                        <svg class="w-8 md:w-9 bg-white/20 rounded-full hover:bg-white/30"
-                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                            fill="rgba(237,237,237,1)">
-                                            <path
-                                                d="M7.82843 10.9999H20V12.9999H7.82843L13.1924 18.3638L11.7782 19.778L4 11.9999L11.7782 4.22168L13.1924 5.63589L7.82843 10.9999Z">
-                                            </path>
-                                        </svg>
-                                    </button>
-                                    <button>
-                                        <svg class="w-8 md:w-9 bg-white/20 rounded-full hover:bg-white/30"
-                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                            fill="rgba(251,251,251,1)">
-                                            <path
-                                                d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
-                                            </path>
-                                        </svg></button>
+                                    @endIf
                                 </div>
                             </div>
                         </div>
@@ -173,7 +162,7 @@
                                     class="w-[350px] sm:w-[380px] lg:w-[400px] xl:w-[500px]">
                             </div>
                             <form action="/index-review" method="post"
-                                class="bg-green-head/30 rounded-md mt-4 p-2 absolute top-3 lg:top-9 right-0 left-0">
+                                class="bg-green-head/60 rounded-md mt-4 p-2 absolute top-3 lg:top-9 right-0 left-0">
                                 @csrf
                                 <p class="text-white text-lg lg:text-xl font-bold text-center py-3">Kirimkan Pendapatmu</p>
                                 <input type="text" name="nama" id="nama" placeholder="Masukan namamu"
@@ -258,9 +247,8 @@
                         </h3>
                         <p class="text-sm sm:text-base text-black md:text-lg">Smart Locker adalah aplikasi web untuk
                             mengakses dan mengelola loker pintar. Pengguna memindai QR code loker, masuk dengan username dan
-                            password, dan jika loker terisi, pemilik dapat verifikasi melalui email. Setelah masuk,
-                            informasi loker dan QR code tersedia untuk diunduh. Selesai menggunakan, pengguna menerima
-                            ucapan terima kasih dan QR code untuk memberikan masukan. Antarmuka yang sederhana memastikan
+                            password, dan jika loker terisi, maka akan ada peringatan pada login loker. Setelah masuk,
+                            pengguna dapat mengelola loker. Antarmuka yang sederhana memastikan
                             kemudahan penggunaan.</p>
                     </div>
                 </div>
@@ -275,10 +263,10 @@
             </p>
         </footer>
 
-        @if (session('success'))
+        @if (session('info'))
             <div class="toast transition" id="toast">
                 <div class="alert alert-info">
-                    <span class="">{{ session('success') }}</span>
+                    <span class="">{{ session('info') }}</span>
                 </div>
             </div>
         @endif

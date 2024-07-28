@@ -8,6 +8,7 @@ use App\Models\RiwayatPeminjaman;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class AdminController extends Controller
 {
@@ -17,11 +18,18 @@ class AdminController extends Controller
             return redirect('/locker/home');
         }
 
+        $emptyData = 0;
+
+        if (Review::where('sentimen', 'Positive')->count() == 0 && Review::where('sentimen', 'Negative')->count() == 0 && Review::where('sentimen', 'Neutral')->count() == 0) {
+            $emptyData = 100;
+        }
+
         $sentimen = [
             'positive' => Review::where('sentimen', 'Positive')->count(),
             'negative' => Review::where('sentimen', 'Negative')->count(),
             'neutral' => Review::where('sentimen', 'Neutral')->count(),
-            'total' => Review::all()->count()
+            'emptyData' => $emptyData,
+            'total' => Review::all()->count(),
         ];
 
         return view('admin.dashboard', [
@@ -65,7 +73,7 @@ class AdminController extends Controller
 
         return view('admin.riwayat-peminjaman', [
             'title' => 'Admin | Riwayat Peminjaman',
-            'riwayat' => RiwayatPeminjaman::all(),
+            'riwayat' => RiwayatPeminjaman::paginate(5),
         ]);
     }
     public function daftarUlasan()
@@ -76,12 +84,22 @@ class AdminController extends Controller
 
         return view('admin.daftar-ulasan', [
             'title' => 'Admin | Daftar Ulasan',
-            'ulasan' => Review::all(),
+            'ulasan' => Review::paginate(5),
         ]);
     }
 
     public function signIn()
     {
+        $akunAdmin = User::where('role', 'admin')->exists();
+        if (!$akunAdmin) {
+            User::create([
+                'username' => 'admin123',
+                'password' => Hash::make('admin123'),
+                'id_locker' => null,
+                'role' => 'admin',
+            ]);
+        }
+
         return view('admin.sign-in', ['title' => 'Admin | Sign In']);
     }
 
@@ -117,5 +135,11 @@ class AdminController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
         return redirect('/admin-sign-in');
+    }
+
+    public function hapusUlasan(Request $id_delete)
+    {
+        Review::destroy($id_delete['id']);
+        return back()->with('info', 'ulasan berhasil dihapus');
     }
 }
