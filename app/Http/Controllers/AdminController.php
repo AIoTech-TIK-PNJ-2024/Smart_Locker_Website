@@ -91,6 +91,14 @@ class AdminController extends Controller
     public function signIn()
     {
         $akunAdmin = User::where('role', 'admin')->exists();
+        $lokerAdmin = Locker::where('nomor_locker', 1)->exists();
+
+        if (!$lokerAdmin) {
+            Locker::create([
+                'nomor_locker' => 1,
+            ]);
+        }
+
         if (!$akunAdmin) {
             User::create([
                 'username' => 'admin123',
@@ -141,5 +149,19 @@ class AdminController extends Controller
     {
         Review::destroy($id_delete['id']);
         return back()->with('info', 'ulasan berhasil dihapus');
+    }
+
+    public function hapusPeminjam(Request $id_delete)
+    {
+        $pengguna = User::find($id_delete);
+
+        RiwayatPeminjaman::create([
+            'username' => $pengguna[0]['username'],
+            'id_locker' => $pengguna[0]['id_locker'],
+            'durasi' => ceil($pengguna[0]['created_at']->diffInMinutes(now())),
+        ]);
+        
+        User::destroy($id_delete['id']);
+        return back()->with('info', 'pengguna berhasil dihapus');
     }
 }

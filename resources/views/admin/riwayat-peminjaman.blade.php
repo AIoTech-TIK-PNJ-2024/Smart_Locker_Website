@@ -27,7 +27,7 @@
                             <td class="text-xs lg:text-sm p-2 text-center hidden min-[470px]:table-cell">
                                 {{ $item->created_at }}
                             </td>
-                            <td class="text-xs lg:text-sm p-2 text-center">{{ $item->created_at->diffForHumans() }}</td>
+                            <td class="text-xs lg:text-sm p-2 text-center">{{ $item->durasi }} menit</td>
                         </tr>
                     @endforeach
                 </tbody>

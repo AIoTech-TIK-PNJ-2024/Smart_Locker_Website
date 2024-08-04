@@ -15,6 +15,7 @@ Route::get('/admin-dashboard', [AdminController::class, 'dashboard'])->middlewar
 Route::get('/admin-sign-in', [AdminController::class, 'signIn'])->middleware('guest');
 Route::get('/admin-daftar-loker', [AdminController::class, 'daftarLoker'])->middleware('auth');
 Route::get('/admin-daftar-peminjaman', [AdminController::class, 'daftarPeminjaman'])->middleware('auth');
+Route::post('/admin-daftar-peminjaman', [AdminController::class, 'hapusPeminjam'])->middleware('auth');
 Route::get('/admin-riwayat-peminjaman', [AdminController::class, 'riwayatPeminjaman'])->middleware('auth');
 Route::get('/admin-daftar-ulasan', [AdminController::class, 'daftarUlasan'])->middleware('auth');
 Route::post('/admin-daftar-ulasan-delete', [AdminController::class, 'hapusUlasan'])->middleware('auth');

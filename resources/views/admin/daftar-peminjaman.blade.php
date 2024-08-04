@@ -3,7 +3,7 @@
     <!-- <h1>Riwayat peminjaman</h1> -->
     <div class="bg-white rounded-sm shadow-md mb-4">
         <div class="bg-white shadow-md flex items-center justify-between p-4">
-            <h2 class="text-2xl text-slate-600 font-bold mx-2">Riwayat Peminjaman</h2>
+            <h2 class="text-2xl text-slate-600 font-bold mx-2">Daftar Peminjaman</h2>
             <div class="breadcrumbs text-sm">
                 <ul>
                     <li><a href=" /admin-dashboard">Dashboard</a></li>
@@ -35,13 +35,24 @@
                                 {{ $item->created_at }}
                             </td>
                             <td class="text-xs lg:text-sm p-2 text-center">{{ $item->created_at->diffForHumans() }}</td>
-                            <td class="text-xs lg:text-sm p-2 text-center"><button
-                                    class="btn btn-error text-white">Hapus</button></td>
+                            <td class="text-xs lg:text-sm p-2 text-center">
+                                <form action="/admin-daftar-peminjaman" method="post">
+                                    @csrf
+                                    <input name="id" type="text" class="hidden" value="{{ $item->id }}">
+                                    <button class="btn btn-error text-white" type="submit">Hapus</button>
+                                </form>
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>
-
             </table>
         </div>
+        @if (session('info'))
+            <div class="toast transition" id="toast-delete">
+                <div class="alert alert-info">
+                    <span class="">{{ session('info') }}</span>
+                </div>
+            </div>
+        @endif
     </div>
 @endsection

@@ -23,8 +23,8 @@
 
     {{-- remix icon --}}
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
-    @vite('public/css/style.css')
     @vite('resources/css/app.css')
     <title>{{ $title }}</title>
 </head>
